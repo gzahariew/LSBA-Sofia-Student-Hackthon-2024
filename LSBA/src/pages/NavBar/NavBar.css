@@ -1,0 +1,134 @@
+
+
+/* Navbar styling for desktop */
+nav {
+  font-family: "Unbounded", serif;
+  font-weight: 500;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 25px;
+  height: 10vh;
+  width: 73.611vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-link-style {
+  font-size: clamp(16px, 1.667vw, 24px);
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15.069vw;
+  white-space: nowrap;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .nav-link-container {
+    position: fixed; /* Fixed positioning to keep it visible */
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .nav-link-container.open {
+    transform: translateX(0);
+  }
+
+  /* Hamburger Menu Icon */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 10px;
+    z-index: 1000;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Transform bars into an "X" when open */
+  .hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Hide the horizontal menu links on mobile */
+  .nav-link-container {
+    display: none;
+  }
+
+  .nav-link-container.open {
+    display: flex;
+  }
+
+  /* Style the mobile links */
+  .nav-link-container a {
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link-container a:hover {
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Prevent scrolling on body when menu is open */
+  .no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Larger screen - Hide hamburger menu */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Logo for all screen sizes */
+#home {
+  margin-left: 8px;
+}
+
+#logo-navbar {
+  width: 130px;
+}
+
