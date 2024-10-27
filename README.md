@@ -20,4 +20,31 @@ This project is designed and developed by me for an organization named **LSBA (L
    Open your terminal and use the following command to navigate into the project folder:
    ```bash
    cd LSFA
+   
+3. **Install Dependencies**  
+   Make sure you have npm installed, then run:
+   ```bash
+   npm install
+   ```
+   This will install all necessary packages.
+   
+4. **Run the Development Server**  
+   Start the development server with:
+   ```bash
+   npm run dev
+   ```
+   
+5. **Access the Localhost Link**  
+   A localhost link will appear in the terminal. Hold CTRL and click the link to open the app in your browser.
+
+6. **Explore and Share**
+   Feel free to explore the project and share it with employers!
+
+   **Thank you for checking out my project!**
+
+
+
+
+
+
 
