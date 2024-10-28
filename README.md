@@ -9,7 +9,7 @@ This project is designed and developed by me for an organization named **LSBA (L
 
 ## Technologies Used
 - **React** (with Vite for fast builds)
-- **React-Spring** (for animations)
+- **GSAP** (for animations)
 
 ## How to Run Locally
 
@@ -25,6 +25,8 @@ This project is designed and developed by me for an organization named **LSBA (L
    Make sure you have npm installed, then run:
    ```bash
    npm install
+   npm install gsap
+   npm install @gsap/react
    ```
    This will install all necessary packages.
    
