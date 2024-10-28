@@ -112,12 +112,6 @@ body {
   color: white;
   cursor: pointer;
   z-index: 10;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.button-main:hover {
-  background-color: #6f787f; /* Darken background color on hover */
-  transform: scale(1.05); /* Slightly scale up the button */
 }
 
 @media(max-width: 768px){
@@ -168,7 +162,7 @@ body {
 
   }
 
-  .solution{
+  #solution{
     position: static !important;
     padding-top: 10vh;
     padding-left: 10px;
@@ -179,7 +173,7 @@ body {
     justify-content: center !important;
   }
 
-  .support {
+  #support {
     position: static !important;
     padding-top: 10vh;
   }
@@ -266,7 +260,7 @@ body {
   align-items: center;
 }
 
-.solution {
+#solution {
   position: absolute;
   left: -0.694vw;
   top: -10.444vw;
@@ -290,7 +284,7 @@ body {
   background-image: linear-gradient(to bottom right, #B9CCEC, #CDD5F0 );
 }
 
-.support {
+#support {
   position: absolute;
   right: -0.694vw;
   top: -10.444vw;

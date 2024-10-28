@@ -34,7 +34,7 @@
   
   
   #back-on-top {
-    font-size: clamp(26px, 3.333vw, 40px);
+    font-size: clamp(23px, 3.333vw, 40px);
     font-family: "Unbounded", serif;
     color: black;
     margin: 0;

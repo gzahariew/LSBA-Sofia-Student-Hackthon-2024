@@ -1,6 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./footer.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
 
 const Footer = () => {
     const [visible, setVisible] = useState(false);
@@ -54,6 +62,19 @@ const Footer = () => {
         behavior: "smooth",
       });
     };
+
+    useGSAP(() =>
+      gsap.from("#biggest-logo", {
+        y: 100,
+        // opacity: 0,
+        duration: 2,
+        ease: "back.out(2)",
+        scrollTrigger: {
+          trigger: "#biggest-logo",
+          start: "top 95%",
+        }
+      })
+    );
 
 
   return (
@@ -110,7 +131,7 @@ const Footer = () => {
               НАЧАЛО
             </Link>
             <Link to="/contact" className="link-style" onClick={(e) => handleLinkClick(e, "/contact")} > 
-              СВЪРЖИ СЕ
+              КОНТАКТИ
             </Link>
             <Link to="/about" className="link-style" onClick={(e) => handleLinkClick(e, "/about")} >
               ЗА НАС

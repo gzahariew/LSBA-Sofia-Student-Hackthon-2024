@@ -21,29 +21,89 @@ function Home() {
     navigate("/contact");
   };
 
-  useGSAP(() =>
-    gsap.from(["#let", "#breathe"], {
-      x: "-50vw",
-      opacity: 0,
-      duration: 2,
-      ease: "power3.out",
-      stagger: 0.1,
-      delay: 0.3,
-    })
-  );
+  const defaultAnimateOptions = {
+    duration: 1,
+    ease: "circ.out",
+    opacity: 0,
+  };
 
-  useGSAP(()=> 
-    gsap.from(["#sofia", "#again" ], {
-      x: "50vw",
-      opacity: 0,
-      duration: 2,
-      ease: "power2.out",
-      stagger: 0.11,
-      delay: 0.4,
-    }),
-  );
+  // Reusable animation function
+  const animateElements = (targets, options = {}) => {
+    const mergedOptions = { ...defaultAnimateOptions, ...options };
 
+    useGSAP(() => gsap.from(targets, mergedOptions));
+  };
 
+  // Define your animations with reduced redundancy
+  animateElements(["#let", "#breathe"], {
+    x: "-50vw",
+    duration: 2,
+    ease: "power3.out",
+    stagger: 0.1,
+    delay: 0.3,
+  });
+
+  animateElements(["#sofia", "#again"], {
+    x: "50vw",
+    duration: 2,
+    ease: "power2.out",
+    stagger: 0.11,
+    delay: 0.4,
+  });
+
+  animateElements(".starting-text", {
+    y: 100,
+    ...defaultAnimateOptions,
+    delay: 0.5,
+  });
+
+  // Scroll-triggered animations using a shared function
+  const scrollAnimateElements = (targets, options = {}) => {
+    const mergedOptions = {
+      ...options,
+      scrollTrigger: {
+        trigger: targets[0], // Use the first target as the trigger
+        start: "top 95%",
+      },
+    };
+
+    useGSAP(() => gsap.from(targets, mergedOptions));
+  };
+
+  // Group similar scroll-triggered animations
+  const scrollAnimations = [
+    { targets: ["#problem"], options: { x: "50vw", duration: 1 } },
+    { targets: ["#support"], options: { x: "50vw" }, duration: 1 },
+    { targets: ["#tramvai"], options: { x: "-30vw", duration: 1.1 } },
+    { targets: ["#problem-paragraph"], options: { x: "50vw", duration: 1.1 } },
+    { targets: ["#first-btn-main"], options: { x: "50vw", duration: 1.1 } },
+    { targets: ["#solution"], options: { x: "-50vw" }, duration: 1 },
+  ];
+
+  // Execute all scroll-triggered animations
+  scrollAnimations.forEach(({ targets, options }) => {
+    scrollAnimateElements(targets, options);
+  });
+
+  const handleMouseEnterFirst = () => {
+    gsap.to(".button-main", {
+      // backgroundColor: "#6f787f", // Darker background color on hover
+      opacity: 0.8,
+      scale: 1.05, // Slight scale up
+      duration: 0.3,
+      ease: "power1.out",
+    });
+  };
+
+  const handleMouseLeaveFirst = () => {
+    gsap.to(".button-main", {
+      // backgroundColor: "#8c959d", // Original background color
+      opacity: 1,
+      scale: 1, // Reset scale
+      duration: 0.3,
+      ease: "power1.out",
+    });
+  };
 
   return (
     <>
@@ -70,13 +130,13 @@ function Home() {
       <main>
         <section id="problem-section">
           <img
-            className="diamond-backlight-white"
+            className="diamond-backlight-white backlight"
             src="/images/White gradient.webp"
             alt="white gradient left side"
           />
 
           <img
-            className="diamond-backlight-blue"
+            className="diamond-backlight-blue backlight"
             src="/images/Blue gradient.webp"
             alt="blue gradient right side"
           />
@@ -86,6 +146,7 @@ function Home() {
             </h1>
 
             <img
+              id="tramvai"
               src="/images/tramvai.webp"
               alt="Public transport nightime"
               className="img-main"
@@ -102,9 +163,12 @@ function Home() {
                 задържа замърсители, особено през зимата.
               </p>
               <button
+                id="first-btn-main"
                 type="button"
                 className="button-main"
                 onClick={handleRedirectAbout}
+                onMouseEnter={handleMouseEnterFirst}
+                onMouseLeave={handleMouseLeaveFirst}
               >
                 НАУЧИ ПОВЕЧЕ
               </button>
@@ -113,13 +177,13 @@ function Home() {
         </section>
         <section className="section-solution">
           <img
-            className="brown-gradient"
+            className="brown-gradient backlight"
             src="/images/brown-gradient.webp"
             alt="brown-gradient right side"
           />
 
           <div id="solution-content-container" className="content-container">
-            <h1 className="solution big-text-main">SOLUTION</h1>
+            <h1 id="solution" className="big-text-main">SOLUTION</h1>
             <div className="button-paragraph">
               <p className="paragraph-main">
                 Модернизацията на сградите в София може да подобри движението на
@@ -130,6 +194,8 @@ function Home() {
                 type="button"
                 className="button-main brown"
                 onClick={handleRedirectAbout}
+                onMouseEnter={handleMouseEnterFirst}
+                onMouseLeave={handleMouseLeaveFirst}
               >
                 ОЩЕ
               </button>
@@ -144,7 +210,9 @@ function Home() {
         </section>
         <section className="section-support">
           <div className="content-container">
-            <h1 className="support big-text-main">SUPPORT</h1>
+            <h1 id="support" className=" big-text-main">
+              SUPPORT
+            </h1>
             <img
               className="img-main"
               src="/images/chill-structure.webp"
@@ -159,6 +227,8 @@ function Home() {
                 type="button"
                 className="button-main purple-btn"
                 onClick={handleRedirectContact}
+                onMouseEnter={handleMouseEnterFirst}
+                onMouseLeave={handleMouseLeaveFirst}
               >
                 СВЪРЖИ СЕ
               </button>
