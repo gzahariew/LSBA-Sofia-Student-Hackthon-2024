@@ -78,6 +78,12 @@ function Home() {
     { targets: ["#problem-paragraph"], options: { x: "50vw", duration: 1.1 } },
     { targets: ["#first-btn-main"], options: { x: "50vw", duration: 1.1 } },
     { targets: ["#solution"], options: { x: "-50vw" }, duration: 1 },
+    { targets: ["#img-main-solution"], options: { x: "30vw", duration: 1.1 } },
+    { targets: ["#paragraph-solution-home"], options: { x: "-50vw", duration: 1.1 } },
+    { targets: ["#brown-btn"], options: { x: "-50vw", duration: 1.1 } },
+    { targets: ["#img-support-home"], options: { x: "-30vw", duration: 1.1 } },
+    { targets: ["#paragraph-support-home"], options: { x: "50vw", duration: 1.1 } },
+    { targets: ["#purple-btn-home"], options: { x: "50vw", duration: 1.1 } },
   ];
 
   // Execute all scroll-triggered animations
@@ -185,13 +191,14 @@ function Home() {
           <div id="solution-content-container" className="content-container">
             <h1 id="solution" className="big-text-main">SOLUTION</h1>
             <div className="button-paragraph">
-              <p className="paragraph-main">
+              <p id="paragraph-solution-home" className="paragraph-main">
                 Модернизацията на сградите в София може да подобри движението на
                 въздуха и да намали замърсяването, смекчавайки ефектите на
                 географското разположение.
               </p>
               <button
                 type="button"
+                id="brown-btn"
                 className="button-main brown"
                 onClick={handleRedirectAbout}
                 onMouseEnter={handleMouseEnterFirst}
@@ -214,17 +221,19 @@ function Home() {
               SUPPORT
             </h1>
             <img
+              id="img-support-home"
               className="img-main"
               src="/images/chill-structure.webp"
               alt="Beutiful structure from sofia on purple background "
             />
             <div className="button-paragraph">
-              <p className="paragraph-main">
+              <p id="paragraph-support-home" className="paragraph-main">
                 Независимо дали сте гражданин или бизнес, показването на интерес
                 към нашата кауза ни помага много в нейното осъществяване.
               </p>
               <button
                 type="button"
+                id="purple-btn-home"
                 className="button-main purple-btn"
                 onClick={handleRedirectContact}
                 onMouseEnter={handleMouseEnterFirst}
