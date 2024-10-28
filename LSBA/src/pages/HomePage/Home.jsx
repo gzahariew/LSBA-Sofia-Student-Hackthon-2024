@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import backgroundImage from "/images/sofia-smoke.webp";
 import "./home.css";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/footer";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
 
 function Home() {
   const navigate = useNavigate();
-  
+
   const handleRedirectAbout = () => {
     navigate("/about");
   };
@@ -14,6 +20,30 @@ function Home() {
   const handleRedirectContact = () => {
     navigate("/contact");
   };
+
+  useGSAP(() =>
+    gsap.from(["#let", "#breathe"], {
+      x: "-50vw",
+      opacity: 0,
+      duration: 2,
+      ease: "power3.out",
+      stagger: 0.1,
+      delay: 0.3,
+    })
+  );
+
+  useGSAP(()=> 
+    gsap.from(["#sofia", "#again" ], {
+      x: "50vw",
+      opacity: 0,
+      duration: 2,
+      ease: "power2.out",
+      stagger: 0.11,
+      delay: 0.4,
+    }),
+  );
+
+
 
   return (
     <>
@@ -54,13 +84,13 @@ function Home() {
             <h1 id="problem" className="big-text-main">
               PROBLEM
             </h1>
-            
-              <img
-                src="/images/tramvai.webp"
-                alt="Public transport nightime"
-                className="img-main"
-              />
-            
+
+            <img
+              src="/images/tramvai.webp"
+              alt="Public transport nightime"
+              className="img-main"
+            />
+
             <div className="button-paragraph">
               <p
                 id="problem-paragraph"
@@ -137,8 +167,7 @@ function Home() {
         </section>
       </main>
       <footer>
-        
-        <Footer/>
+        <Footer />
       </footer>
     </>
   );
