@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./ThankYou.css";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const ThankYou = () => {
   const navigate = useNavigate(); // Initialize the useNavigate hook
@@ -14,6 +16,28 @@ const ThankYou = () => {
     // Cleanup function to clear the timer
     return () => clearTimeout(timer);
   }, [navigate]);
+
+  useGSAP(() =>
+    gsap.from("#thank-you", {
+      y: 100,
+      opacity: 0,
+      duration: 2,
+      ease: "back.out(2)",
+      }
+    )
+  );
+
+  useGSAP(() =>
+    gsap.from([".paragraph-data", ".paragraph-redirect"], {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      ease: "back.out(2)",
+      delay: 0.2,
+        stagger: 0.1
+    })
+  );
+
 
   return (
     <div className='container-thank-you'>

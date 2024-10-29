@@ -1,8 +1,59 @@
 import React from "react";
 import "./About.css";
 import Footer from "../Footer/footer";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
 
 function About() {
+  useGSAP(() => {
+    gsap.from(["#design-about", "#and-about"], {
+      x: "-50vw",
+      opacity: 0,
+      duration: 1.5,
+      ease: "circ.out",
+      delay: 0.3,
+      stagger: 0.1,
+    });
+  });
+
+  useGSAP(() => {
+    gsap.from(["#build-about", "#breathe-about"], {
+      x: "50vw",
+      opacity: 0,
+      duration: 1.5,
+      ease: "circ.out",
+      delay: 0.3,
+      stagger: 0.1,
+    });
+  });
+
+  useGSAP(() => {
+    gsap.from([".img-about"], {
+      x: "50vw",
+      opacity: 0,
+      duration: 1.2,
+      ease: "circ.out",
+      
+    });
+  });
+
+  useGSAP(() => {
+    gsap.from([".headline-medium-about"], {
+      x: "-50vw",
+      opacity: 0,
+      duration: 1.4,
+      ease: "circ.out",
+    });
+  });
+  
+
+
+
+
   return (
     <>
       <header id="header-about">
@@ -28,7 +79,9 @@ function About() {
         />
       </header>
       <main id="about-main">
-        <h4 className="headline-small-about first-headline-about">Кои сме ние?</h4>
+        <h4 className="headline-small-about first-headline-about">
+          Кои сме ние?
+        </h4>
         <img
           className="img-about-main float-right"
           src="/images/4ovek na pokriva.webp"
@@ -43,11 +96,6 @@ function About() {
           пречистващи функции. Чрез тези проекти се стремим да осигурим по-чист
           въздух и устойчиво градско развитие за столицата.
         </p>
-        {/* <img
-          className="img-about-main float-left"
-          src="/images/panelka-front.webp"
-          alt="Old building scaling from left to right"
-        /> */}
         <h4 className="headline-small-about">Какъв е проблемът?</h4>
         <p className="paragraph-about">
           Замърсяването на атмосферата в София е свързано с географското
