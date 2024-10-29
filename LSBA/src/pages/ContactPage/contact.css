@@ -31,13 +31,9 @@
   border: 3px solid #b9c2dc; /* Ensures a flat, solid border */
   cursor: pointer;
   font-weight: 500;
-  transition: 200ms;
+ 
 }
 
-#small-btn:hover {
-  background-color: #b9c2dc; /* Darker background on hover */
-  color: white;
-}
 
 .big-text {
   font-family: "Geologica", serif;

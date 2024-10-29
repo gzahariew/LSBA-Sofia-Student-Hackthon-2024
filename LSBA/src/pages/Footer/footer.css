@@ -112,15 +112,6 @@
   }
 
   @media(max-width: 768px) {
-    #solution-content-container {
-        flex-direction: column;
-        justify-content: center !important;
-      }
-    
-      .support {
-        position: static !important;
-        padding-top: 10vh;
-      }
     
       #footer-section {
         justify-content: flex-end !important;

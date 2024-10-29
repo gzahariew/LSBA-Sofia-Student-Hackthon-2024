@@ -17,7 +17,7 @@ const Footer = () => {
   
     const handleSend = () => {
       if (email.trim() && validateEmail(email)) {
-        alert("Имейла беше изпратен успешно!");
+        alert("Email sent!");
         setEmail(""); // Clear input after sending
       } else {
         alert("Please enter a valid email address");

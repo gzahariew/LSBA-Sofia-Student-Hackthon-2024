@@ -34,7 +34,7 @@ function Home() {
     useGSAP(() => gsap.from(targets, mergedOptions));
   };
 
-  // Define your animations with reduced redundancy
+  // Define animations with reduced redundancy
   animateElements(["#let", "#breathe"], {
     x: "-50vw",
     duration: 2,

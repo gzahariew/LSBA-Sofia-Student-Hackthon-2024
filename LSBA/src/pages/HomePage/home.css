@@ -72,6 +72,10 @@ body {
   .big-text-header {
     display: none;  /* Hide on very small screens */
   }
+  #solution-content-container {
+    flex-direction: column;
+    justify-content: center !important;
+  }
 }
 
 .big-text-main {
@@ -114,7 +118,7 @@ body {
   z-index: 10;
 }
 
-@media(max-width: 768px){
+@media(max-width: 670px){
 
   #problem {
     position: static !important;
@@ -166,11 +170,6 @@ body {
     position: static !important;
     padding-top: 10vh;
     padding-left: 10px;
-  }
-   
-  #solution-content-container {
-    flex-direction: column;
-    justify-content: center !important;
   }
 
   #support {
