@@ -7,8 +7,7 @@ import NavbarContact from './pages/NavBar/NavBarContact';
 import Home from './pages/HomePage/Home';
 import About from './pages/AboutPage/About';
 import Contact from './pages/ContactPage/Contact';
-import ThankYou from './pages/ThankYou/thankYou';
-import './App.css'; 
+import ThankYou from './pages/ThankYou/thankYou'; 
 
 const App = () => {
   const location = useLocation(); // Get the current location
