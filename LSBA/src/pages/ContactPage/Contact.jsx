@@ -1,9 +1,10 @@
-import React, { useState, useEffect ,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./contact.css";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
+// Register GSAP plugins
 gsap.registerPlugin(useGSAP);
 
 const Contact = () => {
@@ -93,10 +94,12 @@ const Contact = () => {
     }
   };
 
+  //Count how many clicks are made so changes can be added
   const handleClickSmall = () => {
-    setCount(prevCount => prevCount + 1);
+    setCount((prevCount) => prevCount + 1);
   };
 
+  //State based on count
   const paragraphContent = () => {
     return count % 2 === 1
       ? "Единственият начин това да е възможно е чрез чужда помощ и сътрудничество. При интерес, ние ще се свържем с вас."
@@ -115,90 +118,85 @@ const Contact = () => {
     return count % 2 === 0 ? "ЗА ОРГАНИЗАЦИИ" : "ЗА ГРАЖДАНИ";
   };
 
+  // Function to create GSAP animations with default parameters
+  const createAnimation = (targets, animationProps) => {
+    useGSAP(() => gsap.from(targets, animationProps));
+  };
 
-  useGSAP(() =>
-    gsap.from("#hello-text", {
-      x: "-20vh",
-      opacity: 0,
-      duration: 1,
-      ease: "back.out(1.7)",
-      stagger: 0.3,
-    })
-  );
+  // Function to handle mouse hover effects on buttons
+  const handleMouseHover = (elementRef, styles, duration) => {
+    gsap.to(elementRef.current, {
+      ...styles,
+      duration,
+    });
+  };
 
-  useGSAP(() =>
-    gsap.from(".headline-input-container", {
-      y: "10vh",
-      opacity: 0,
-      duration: 0.6,
-      ease: "back.out(1.7)",
-      stagger: 0.3,
-      delay: 0.8,
-    })
-  );
+  // Animate #hello-text and .headline-input-container elements
+  createAnimation("#hello-text", {
+    x: "-20vh",
+    opacity: 0,
+    duration: 1,
+    ease: "back.out(1.7)",
+    stagger: 0.3,
+  });
 
+  createAnimation(".headline-input-container", {
+    y: "10vh",
+    opacity: 0,
+    duration: 0.6,
+    ease: "back.out(1.7)",
+    stagger: 0.3,
+    delay: 0.8,
+  });
+
+  // Animate bigBtnRef with fromTo for custom start and end states
   useGSAP(() => {
     gsap.fromTo(
       bigBtnRef.current,
-      {
-        y: "10vh", // Starting position (from)
-        opacity: 0, // Starting opacity (from)
-      },
-      {
-        y: "0vh", // Ending position (to)
-        opacity: 1, // Ending opacity (to)
-        duration: 0.5,
-        ease: "circ.out(1.7)",
-        delay: 2.5,
-      }
+      { y: "10vh", opacity: 0 },
+      { y: "0vh", opacity: 1, duration: 0.5, ease: "circ.out(1.7)", delay: 2.5 }
     );
   });
 
-  const handleMouseEnter = () => {
-    gsap.to(bigBtnRef.current, {
-      backgroundColor: "white",
-      color: "black",
-      borderColor: "#b9c2dc",
-      duration: 0.2,
-    });
-  };
+  // Event handlers for mouse enter and leave on big button
+  const handleMouseEnter = () =>
+    handleMouseHover(
+      bigBtnRef,
+      { backgroundColor: "white", color: "black", borderColor: "#b9c2dc" },
+      0.2
+    );
 
-  const handleMouseLeave = () => {
-    gsap.to(bigBtnRef.current, {
-      backgroundColor: "#b9c2dc",
-      color: "white",
-      borderColor: "#b9c2dc",
-      duration: 0.2,
-    });
-  };
+  const handleMouseLeave = () =>
+    handleMouseHover(
+      bigBtnRef,
+      { backgroundColor: "#b9c2dc", color: "white", borderColor: "#b9c2dc" },
+      0.2
+    );
 
+  // Event handlers for mouse enter and leave on small button
+  const handleMouseEnterSmall = () =>
+    handleMouseHover(
+      buttonRef,
+      { backgroundColor: "#b9c2dc", color: "white" },
+      0.2
+    );
 
-    const handleMouseEnterSmall = () => {
-      gsap.to(buttonRef.current, {
-        backgroundColor: "#b9c2dc",
-        color: "white",
-        duration: 0.2,
-      });
-    };
+  const handleMouseLeaveSmall = () =>
+    handleMouseHover(
+      buttonRef,
+      { backgroundColor: "white", color: "black" },
+      0.2
+    );
 
-    const handleMouseLeaveSmall = () => {
-      gsap.to(buttonRef.current, {
-        backgroundColor: "white",
-        color: "black",
-        duration: 0.2,
-      });
-    };
-
-  useGSAP(() =>
-    gsap.from("#small-paragraph", {
-      x: "10vw",
-      opacity: 0,
-      duration: 0.6,
-      ease: "back.out(1.7)",
-      stagger: 0.3,
-      delay: 3,
-    })
-  );
+  // Animate #small-paragraph element
+  createAnimation("#small-paragraph", {
+    x: "10vw",
+    opacity: 0,
+    duration: 0.6,
+    ease: "back.out(1.7)",
+    stagger: 0.3,
+    delay: 3,
+  });
 
   useGSAP(() => {
     gsap.fromTo(

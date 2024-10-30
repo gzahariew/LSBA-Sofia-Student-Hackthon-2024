@@ -1,42 +1,40 @@
 .container-thank-you {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 100vw; /* Sets the container width to 100% of the viewport width */
+    height: 100vh; /* Sets the container height to 100% of the viewport height */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically */
+    flex-direction: column; /* Arranges children in a column */
 }
 
-#thank-you{
-    font-family: "Work Sans", serif;
-  font-size: 160px;
-  font-weight: 900;
-  opacity: 0.2;
-  line-height: auto;
-  margin: 0;
-  z-index: -1;
-  letter-spacing: -6.25px;
+#thank-you {
+    font-family: "Work Sans", serif; /* Sets font family */
+    font-size: 160px; /* Sets font size */
+    font-weight: 900; /* Sets boldness of the font */
+    opacity: 0.2; /* Sets transparency */
+    line-height: auto; /* Original line-height */
+    margin: 0; /* Resets margin */
+    z-index: -1; /* Places the element behind other elements */
+    letter-spacing: -6.25px; /* Adjusts spacing between letters */
 }
 
 .paragraph-data {
-    
-        font-family: "Roboto", serif;
-        font-weight: 500;
-        color: black;
-        opacity: 80%;
-        font-size: 28px;
-        letter-spacing: -5%;
-        margin: 0;
-        margin-top: 30px;
-      
+    font-family: "Roboto", serif; /* Sets font family */
+    font-weight: 500; /* Sets normal font weight */
+    color: black; /* Sets text color to black */
+    opacity: 80%; /* Sets transparency (should use a value between 0 and 1) */
+    font-size: 28px; /* Sets font size */
+    letter-spacing: -5%; /* Adjusts spacing between letters */
+    margin: 0; /* Resets margin */
+    margin-top: 30px; /* Adds top margin for spacing */
 }
 
 .paragraph-redirect {
-    font-family: "Roboto", serif;
-        font-weight: 500;
-        color: black;
-        opacity: 80%;
-        font-size: 18px;
-        letter-spacing: -5%;
-        margin-top: 10px;
+    font-family: "Roboto", serif; /* Sets font family */
+    font-weight: 500; /* Sets normal font weight */
+    color: black; /* Sets text color to black */
+    opacity: 80%; /* Sets transparency (should use a value between 0 and 1) */
+    font-size: 18px; /* Sets font size */
+    letter-spacing: -5%; /* Adjusts spacing between letters */
+    margin-top: 10px; /* Adds top margin for spacing */
 }

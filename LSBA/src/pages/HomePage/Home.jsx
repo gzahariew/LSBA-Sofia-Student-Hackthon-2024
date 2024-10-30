@@ -7,20 +7,25 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+//Rregister GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 function Home() {
+  // Retrieves the useNavigate function from the react-router-dom library
   const navigate = useNavigate();
 
+  // Function to handle redirecting to the About page
   const handleRedirectAbout = () => {
     navigate("/about");
   };
 
+  // Function to handle redirecting to the Contact page
   const handleRedirectContact = () => {
     navigate("/contact");
   };
 
+  // Default options for animating elements
   const defaultAnimateOptions = {
     duration: 1,
     ease: "circ.out",
@@ -79,10 +84,16 @@ function Home() {
     { targets: ["#first-btn-main"], options: { x: "50vw", duration: 1.1 } },
     { targets: ["#solution"], options: { x: "-50vw" }, duration: 1 },
     { targets: ["#img-main-solution"], options: { x: "30vw", duration: 1.1 } },
-    { targets: ["#paragraph-solution-home"], options: { x: "-50vw", duration: 1.1 } },
+    {
+      targets: ["#paragraph-solution-home"],
+      options: { x: "-50vw", duration: 1.1 },
+    },
     { targets: ["#brown-btn"], options: { x: "-50vw", duration: 1.1 } },
     { targets: ["#img-support-home"], options: { x: "-30vw", duration: 1.1 } },
-    { targets: ["#paragraph-support-home"], options: { x: "50vw", duration: 1.1 } },
+    {
+      targets: ["#paragraph-support-home"],
+      options: { x: "50vw", duration: 1.1 },
+    },
     { targets: ["#purple-btn-home"], options: { x: "50vw", duration: 1.1 } },
   ];
 
@@ -93,7 +104,6 @@ function Home() {
 
   const handleMouseEnterFirst = () => {
     gsap.to(".button-main", {
-      // backgroundColor: "#6f787f", // Darker background color on hover
       opacity: 0.8,
       scale: 1.05, // Slight scale up
       duration: 0.3,
@@ -103,7 +113,6 @@ function Home() {
 
   const handleMouseLeaveFirst = () => {
     gsap.to(".button-main", {
-      // backgroundColor: "#8c959d", // Original background color
       opacity: 1,
       scale: 1, // Reset scale
       duration: 0.3,
@@ -111,11 +120,14 @@ function Home() {
     });
   };
 
+  // The main React component that renders the Home page
   return (
     <>
       <header>
+        {/* The background image */}
         <img id="backgroundImage" src={backgroundImage} alt="Sofia in smog" />
         <div className="container">
+          {/* The main text elements */}
           <h1 id="let" className="big-text-header">
             LET
           </h1>
@@ -135,12 +147,12 @@ function Home() {
       </header>
       <main>
         <section id="problem-section">
+          {/* The "Problem" section */}
           <img
             className="diamond-backlight-white backlight"
             src="/images/White gradient.webp"
             alt="white gradient left side"
           />
-
           <img
             className="diamond-backlight-blue backlight"
             src="/images/Blue gradient.webp"
@@ -150,14 +162,12 @@ function Home() {
             <h1 id="problem" className="big-text-main">
               PROBLEM
             </h1>
-
             <img
               id="tramvai"
               src="/images/tramvai.webp"
               alt="Public transport nightime"
               className="img-main"
             />
-
             <div className="button-paragraph">
               <p
                 id="problem-paragraph"
@@ -182,14 +192,16 @@ function Home() {
           </div>
         </section>
         <section className="section-solution">
+          {/* The "Solution" section */}
           <img
             className="brown-gradient backlight"
             src="/images/brown-gradient.webp"
             alt="brown-gradient right side"
           />
-
           <div id="solution-content-container" className="content-container">
-            <h1 id="solution" className="big-text-main">SOLUTION</h1>
+            <h1 id="solution" className="big-text-main">
+              SOLUTION
+            </h1>
             <div className="button-paragraph">
               <p id="paragraph-solution-home" className="paragraph-main">
                 Модернизацията на сградите в София може да подобри движението на
@@ -216,6 +228,7 @@ function Home() {
           </div>
         </section>
         <section className="section-support">
+          {/* The "Support" section */}
           <div className="content-container">
             <h1 id="support" className=" big-text-main">
               SUPPORT

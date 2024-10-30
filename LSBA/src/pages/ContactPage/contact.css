@@ -1,172 +1,189 @@
+/* Main container for the section, centered with a set width */
 .main-section {
-  width: 74vw;
-  margin-left: auto;
-  margin-right: auto;
-  flex-direction: column;
+  width: 74vw; /* Sets the width to 74% of the viewport width */
+  margin-left: auto; /* Centers the section horizontally */
+  margin-right: auto; /* Centers the section horizontally */
+  flex-direction: column; /* Aligns child elements in a column */
 }
+
+/* Container for small button and text, spaced evenly */
 .text-smallbtn-container {
-  margin-top: 5.789vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 5.789vh; /* Adds top margin for spacing */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-between; /* Distributes space between items */
+  align-items: center; /* Vertically centers items */
 }
 
+/* Styles for small paragraph text */
 #small-paragraph {
-  font-family: "Inter", sans-serif;
-  font-size: clamp(14px, 1.111vw, 18px);
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 0.2px;
-  max-width: 40vw;
-  margin-bottom: 1.389vw;
+  font-family: "Inter", sans-serif; /* Sets font family */
+  font-size: clamp(14px, 1.111vw, 18px); /* Responsive font size */
+  font-weight: 500; /* Sets font weight */
+  line-height: normal; /* Normal line height */
+  letter-spacing: 0.2px; /* Slightly increases letter spacing */
+  max-width: 40vw; /* Maximum width for the paragraph */
+  margin-bottom: 1.389vw; /* Bottom margin for spacing */
 }
 
+/* Styles for the small button */
 #small-btn {
-  font-family: "Unbounded", serif;
-  font-size: clamp(8px, 0.764vw, 12px);
-  border-radius: 20px;
-  width: clamp(110px, 11.25vw, 162px);
-  height: clamp(32px, 2.917vw, 42px);
-  background-color: white;
-  border: 3px solid #b9c2dc; /* Ensures a flat, solid border */
-  cursor: pointer;
-  font-weight: 500;
- 
+  font-family: "Unbounded", serif; /* Sets font family */
+  font-size: clamp(8px, 0.764vw, 12px); /* Responsive font size */
+  border-radius: 20px; /* Rounds button corners */
+  width: clamp(110px, 11.25vw, 162px); /* Responsive button width */
+  height: clamp(32px, 2.917vw, 42px); /* Responsive button height */
+  background-color: white; /* Sets button background color */
+  border: 3px solid #b9c2dc; /* Solid border color */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  font-weight: 500; /* Sets font weight */
 }
 
-
+/* Styles for large text headers */
 .big-text {
-  font-family: "Geologica", serif;
-  display: block;
-  font-weight: 600;
-  font-size: clamp(70px, 6.836vh, 100px);
-  letter-spacing: -5px;
-  margin-bottom: 0;
-  margin-top: 0;
-  line-height: 1.1;
+  font-family: "Geologica", serif; /* Sets font family */
+  display: block; /* Block display */
+  font-weight: 600; /* Sets font weight */
+  font-size: clamp(70px, 6.836vh, 100px); /* Responsive font size */
+  letter-spacing: -5px; /* Decreases letter spacing */
+  margin-bottom: 0; /* Removes bottom margin */
+  margin-top: 0; /* Removes top margin */
+  line-height: 1.1; /* Sets line height */
 }
 
+/* Styles for input fields */
 .input-all {
-  display: inline-block;
-  width: 100px;
-  border-top: 0px;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 2px solid black;
-  flex-grow: 1;
-  margin-bottom: 18px;
-  padding-bottom: 5px;
-  font-size: clamp(12px, 1.667vw, 24px);
-  font-family: "Inter";
-  font-weight: 400;
-  outline: 0;
+  display: inline-block; /* Allows block properties but remains inline */
+  width: 100px; /* Fixed width */
+  border-top: 0px; /* Removes top border */
+  border-left: 0; /* Removes left border */
+  border-right: 0; /* Removes right border */
+  border-bottom: 2px solid black; /* Bottom border styling */
+  flex-grow: 1; /* Allows input to grow */
+  margin-bottom: 18px; /* Margin for spacing */
+  padding-bottom: 5px; /* Padding at the bottom */
+  font-size: clamp(12px, 1.667vw, 24px); /* Responsive font size */
+  font-family: "Inter"; /* Sets font family */
+  font-weight: 400; /* Sets font weight */
+  outline: 0; /* Removes outline on focus */
 }
 
+/* Active state for input fields */
 .input-all:active {
-  border-top: 0px;
-  border-left: 0;
-  border-right: 0;
+  border-top: 0px; /* Removes top border when active */
+  border-left: 0; /* Removes left border when active */
+  border-right: 0; /* Removes right border when active */
 }
 
+/* Container for input fields and buttons aligned in a row */
 .headline-input-container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  gap: 2.083vw;
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: row; /* Aligns items in a row */
+  align-items: flex-end; /* Aligns items at the bottom */
+  gap: 2.083vw; /* Space between items */
 }
 
+/* Styles for the big button */
 #big-btn {
-  margin-top: 5vh;
-  width: 74vw;
-  height: 13.281vh;
-  border-radius: 5.859vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 6.25vw;
-  padding-right: 6.25vh;
-  font-family: "Inter", serif;
-  font-size: 7.031vh;
-  font-weight: 600;
-  background-color: #b9c2dc;
-  border: 3px solid #b9c2dc;
-  cursor: pointer;
-  color: white;
-  /* transition: 200ms; */
-  margin-bottom: 10px;
+  margin-top: 5vh; /* Top margin for spacing */
+  width: 74vw; /* Sets button width */
+  height: 13.281vh; /* Sets button height */
+  border-radius: 5.859vh; /* Rounds button corners */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-between; /* Distributes space between items */
+  align-items: center; /* Vertically centers items */
+  padding-left: 6.25vw; /* Left padding */
+  padding-right: 6.25vh; /* Right padding */
+  font-family: "Inter", serif; /* Sets font family */
+  font-size: 7.031vh; /* Sets font size */
+  font-weight: 600; /* Sets font weight */
+  background-color: #b9c2dc; /* Sets background color */
+  border: 3px solid #b9c2dc; /* Solid border color */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  color: white; /* Sets text color */
+  /* transition: 200ms; */ /* Uncomment for smooth transition */
+  margin-bottom: 10px; /* Bottom margin for spacing */
 }
 
+/* Hover effects for the big button */
 #big-btn:hover {
-  background-color: white;
-  color: black;
-  border: 3px solid #b9c2dc;
+  background-color: white; /* Changes background color on hover */
+  color: black; /* Changes text color on hover */
+  border: 3px solid #b9c2dc; /* Maintains border color on hover */
 }
 
+/* Styles for circular button */
 #circle-btn {
-  height: 10vh;
-  width: 9.766vh;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s;
+  height: 10vh; /* Sets button height */
+  width: 9.766vh; /* Sets button width */
+  border-radius: 50%; /* Makes button circular */
+  background-color: white; /* Sets background color */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  transition: transform 0.3s; /* Smooth transition for transform */
 }
 
+/* Hover effect for circle button when inside big button */
 #big-btn:hover #circle-btn {
-  background-color: #b9c2dc;
+  background-color: #b9c2dc; /* Changes background color on hover */
 }
 
+/* Styles for pill-shaped circle */
 #pill-circle {
-  background-color: black;
-  height: 6.664vh;
-  width: 1.465vh;
-  border-radius: 0.977vh;
-  transform: rotate(-50deg);
-  transition: transform 0.3s;
+  background-color: black; /* Sets background color */
+  height: 6.664vh; /* Sets height */
+  width: 1.465vh; /* Sets width */
+  border-radius: 0.977vh; /* Rounds corners */
+  transform: rotate(-50deg); /* Initial rotation */
+  transition: transform 0.3s; /* Smooth transition for transform */
 }
 
+/* Hover effect for pill circle when inside big button */
 #big-btn:hover #pill-circle {
-  transform: rotate(50deg);
-  background-color: white;
+  transform: rotate(50deg); /* Changes rotation on hover */
+  background-color: white; /* Changes background color on hover */
 }
 
+/* Styles for input error state */
 .input-error {
-  border-bottom: 2px solid red;
-  transition: 50ms;
+  border-bottom: 2px solid red; /* Red bottom border for errors */
+  transition: 50ms; /* Smooth transition for border change */
 }
 
+/* Media query for screens smaller than 1024px */
 @media (max-width: 1024px) {
   .headline-input-container {
-    flex-direction: column;
-    align-items: normal;
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: normal; /* Aligns items normally */
   }
 
   .input-all {
-    width: auto;
-    margin-bottom: 10px;
+    width: auto; /* Allows input width to adjust */
+    margin-bottom: 10px; /* Margin for spacing */
   }
+
   .big-text {
-    font-size: clamp(30px, 5vw, 100px) !important;
-    letter-spacing: normal;
+    font-size: clamp(30px, 5vw, 100px) !important; /* Responsive font size */
+    letter-spacing: normal; /* Resets letter spacing */
   }
 }
 
+/* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
   .big-text {
-    font-size: clamp(30px, 5vw, 100px);
-    letter-spacing: normal;
+    font-size: clamp(30px, 5vw, 100px); /* Responsive font size */
+    letter-spacing: normal; /* Resets letter spacing */
   }
 
   .text-smallbtn-container {
-    flex-direction: column;
-    margin-bottom: 2vh;
-    align-items: baseline;
-    gap: 1vh;
+    flex-direction: column; /* Stacks elements vertically */
+    margin-bottom: 2vh; /* Margin for spacing */
+    align-items: baseline; /* Aligns items to baseline */
+    gap: 1vh; /* Space between items */
   }
 
   #small-paragraph {
-    max-width: 100%;
+    max-width: 100%; /* Allows full width for small paragraph */
   }
 
   #big-btn {
@@ -177,11 +194,11 @@
 
   #circle-btn {
     height: clamp(40px, 8vh, 60px); /* Smaller responsive size */
-    width: clamp(40px, 8vh, 60px);
+    width: clamp(40px, 8vh, 60px); /* Smaller responsive size */
   }
 
   #pill-circle {
-    height: clamp(20px, 5vh, 40px);
-    width: clamp(5px, 1vh, 15px);
+    height: clamp(20px, 5vh, 40px); /* Smaller responsive height */
+    width: clamp(5px, 1vh, 15px); /* Smaller responsive width */
   }
 }

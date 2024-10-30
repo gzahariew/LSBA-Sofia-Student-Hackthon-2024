@@ -1,138 +1,152 @@
+/* Social media icon container */
 .social-media {
-    height: 2.778vw;
-    width: 2.778vw;
-    display: inline;
-  }
-  
-  #input-footer-text {
-    font-family: "Unbounded", serif;
-    font-weight: 400;
-    line-height: auto;
-    font-size: clamp(14px,1.389vw, 20px);
-    display: block;
-    white-space: nowrap;
-    margin-top: 1.953vh;
-    margin-bottom: 0.977vh;
-  }
-  
-  #input-footer {
-    border: 2px solid rgba(0, 0, 0, 0.8); /* Black border with 80% opacity */
-    padding: clamp(7px, 0.794vw, 12px);                       /* Padding inside the input */
-    font-size: clamp(10px, 1.042vw, 15px);                     /* Font size for the text */
-    width: clamp(240px, 27.153vw, 391px);                        /* Width of the input */
-    border-radius: 5px;                 /* Rounded corners */
-    outline: none;
-    font-family: "Unbounded", serif;
-  }
-  
-  .link-style {
-    font-family: "Unbounded", serif;
-    text-decoration: none;
-    color: black;
-    font-size: clamp(24px, 3.333vw, 48px);
-  }
-  
-  
-  #back-on-top {
-    font-size: clamp(23px, 3.333vw, 40px);
-    font-family: "Unbounded", serif;
-    color: black;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-  }
-  
-  footer {
-    height: 100dvh;
-  }
-  
-  .ending-text {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 77.778vw;
-  }
-  
+  height: 2.778vw; /* Set the height of the container */
+  width: 2.778vw; /* Set the width of the container */
+  display: inline; /* Display the icons inline */
+}
+
+/* Email input text */
+#input-footer-text {
+  font-family: "Unbounded", serif; /* Set the font family */
+  font-weight: 400; /* Set the font weight */
+  line-height: auto; /* Set the line height to automatic */
+  font-size: clamp(14px, 1.389vw, 20px); /* Set the font size using the clamp function */
+  display: block; /* Display the text as a block element */
+  white-space: nowrap; /* Prevent the text from wrapping */
+  margin-top: 1.953vh; /* Add top margin */
+  margin-bottom: 0.977vh; /* Add bottom margin */
+}
+
+/* Email input field */
+#input-footer {
+  border: 2px solid rgba(0, 0, 0, 0.8); /* Add a black border with 80% opacity */
+  padding: clamp(7px, 0.794vw, 12px); /* Set the padding using the clamp function */
+  font-size: clamp(10px, 1.042vw, 15px); /* Set the font size using the clamp function */
+  width: clamp(240px, 27.153vw, 391px); /* Set the width using the clamp function */
+  border-radius: 5px; /* Add rounded corners */
+  outline: none; /* Remove the default outline */
+  font-family: "Unbounded", serif; /* Set the font family */
+}
+
+/* Footer link styles */
+.link-style {
+  font-family: "Unbounded", serif; /* Set the font family */
+  text-decoration: none; /* Remove the default text decoration */
+  color: black; /* Set the text color to black */
+  font-size: clamp(24px, 3.333vw, 48px); /* Set the font size using the clamp function */
+}
+
+/* "Back to top" button */
+#back-on-top {
+  font-size: clamp(23px, 3.333vw, 40px); /* Set the font size using the clamp function */
+  font-family: "Unbounded", serif; /* Set the font family */
+  color: black; /* Set the text color to black */
+  margin: 0; /* Remove the default margin */
+  padding: 0; /* Remove the default padding */
+  white-space: nowrap; /* Prevent the text from wrapping */
+}
+
+/* Footer section */
+footer {
+  height: 100dvh; /* Set the height to the full viewport height */
+}
+
+/* Ending text container */
+.ending-text {
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Distribute the content horizontally */
+  align-items: flex-end; /* Align the content to the bottom */
+  width: 77.778vw; /* Set the width */
+}
+
+/* Footer section container */
+#footer-section {
+  height: 100%; /* Set the height to 100% */
+  width: 100%; /* Set the width to 100% */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange the content vertically */
+  align-items: center; /* Center the content horizontally */
+  justify-content: space-between; /* Distribute the content vertically */
+}
+
+/* Footer icon container */
+.footer-icon-container {
+  display: flex; /* Use flexbox layout */
+  flex-direction: row; /* Arrange the icons horizontally */
+  gap: 1.25vw; /* Add spacing between the icons */
+  align-items: center; /* Center the icons vertically */
+}
+
+/* First container in the footer */
+.footer-first-container {
+  display: flex; /* Use flexbox layout */
+  flex-direction: row; /* Arrange the content horizontally */
+  justify-content: space-between; /* Distribute the content horizontally */
+  width: 77.778vw; /* Set the width */
+  margin-top: 15.332vh; /* Add top margin */
+}
+
+/* Footer links container */
+.footer-links {
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange the links vertically */
+  justify-content: space-between; /* Distribute the links vertically */
+  gap: 3.906vh; /* Add spacing between the links */
+}
+
+/* "Send" button in the footer */
+#btn-send-footer-home {
+  background-color: white; /* Set the background color */
+  color: black; /* Set the text color */
+  opacity: 0.70; /* Set the opacity */
+  border: 2px solid black; /* Add a black border */
+  font-size: clamp(10px, 0.9vw, 13px); /* Set the font size using the clamp function */
+  width: clamp(80px, 6.944vw, 100px); /* Set the width using the clamp function */
+  height: clamp(30px, 2.778vw, 40px); /* Set the height using the clamp function */
+  margin-top: 5px; /* Add top margin */
+}
+
+/* Biggest logo in the footer */
+#biggest-logo {
+  width: 81.25vw; /* Set the width */
+  margin-left: auto; /* Center the logo horizontally */
+  margin-right: auto; /* Center the logo horizontally */
+}
+
+/* Copyright and privacy policy text */
+.rights-text-home {
+  font-size: clamp(0px, 1.667vw, 16px); /* Set the font size using the clamp function */
+  font-family: "Roboto", serif; /* Set the font family */
+  margin: 0; /* Remove the default margin */
+  padding: 0; /* Remove the default padding */
+}
+
+/* Social media icons */
+.social-icons {
+  width: 3.906vh; /* Set the width */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
   #footer-section {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .footer-icon-container {
-    display: flex;
-    flex-direction: row;
-    gap: 1.25vw;
-    align-items: center;
-  }
-  
-  .footer-first-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 77.778vw;
-    margin-top: 15.332vh;
-  }
-  
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 3.906vh;
-  }
-  
-  #btn-send-footer-home {
-    background-color: white ;
-    color: black;
-    opacity: 0.70;
-    border: 2px solid black;
-    font-size: clamp(10px, 0.9vw, 13px);
-    width: clamp(80px, 6.944vw, 100px);
-    height: clamp(30px, 2.778vw,40px );
-    margin-top: 5px;
-  }
-  
-  #biggest-logo {
-    width: 81.25vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .rights-text-home {
-    font-size: clamp(0px, 1.667vw, 16px);
-    font-family: "Roboto", serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .social-icons {
-    width: 3.906vh;
+    justify-content: flex-end !important; /* Align the content to the bottom */
+    gap: 10vh; /* Add vertical spacing */
   }
 
-  @media(max-width: 768px) {
-    
-      #footer-section {
-        justify-content: flex-end !important;
-        gap: 10vh;
-      }
-    
-      .footer-first-container {
-        flex-direction: column !important;
-        gap: 10vh;
-      }
-      
-      .social-media {
-        height: auto !important;
-      }
-    
-      .rights-text-home {
-        display: none;
-      }
-    
-      .ending-text {
-        justify-content: center !important;
-    
-      }
+  .footer-first-container {
+    flex-direction: column !important; /* Arrange the content vertically */
+    gap: 10vh; /* Add vertical spacing */
   }
+
+  .social-media {
+    height: auto !important; /* Set the height to automatic */
+  }
+
+  .rights-text-home {
+    display: none; /* Hide the copyright and privacy policy text */
+  }
+
+  .ending-text {
+    justify-content: center !important; /* Center the content horizontally */
+  }
+}

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "./navBar.css";
 
@@ -11,20 +11,13 @@ const NavbarAbout = () => {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
+      document.body.classList.add("no-scroll");
     } else {
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
+      document.body.classList.remove("no-scroll");
     }
-  
-    return () => {
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-    };
+
+    // Clean up by removing `no-scroll` class on component unmount
+    return () => document.body.classList.remove("no-scroll");
   }, [isOpen]);
 
   return (
@@ -54,4 +47,3 @@ const NavbarAbout = () => {
 };
 
 export default NavbarAbout;
-

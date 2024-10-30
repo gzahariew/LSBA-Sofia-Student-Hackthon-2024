@@ -1,5 +1,3 @@
-
-
 /* Navbar styling for desktop */
 nav {
   font-family: "Unbounded", serif;
@@ -31,7 +29,7 @@ nav {
 /* Mobile Styling */
 @media (max-width: 768px) {
   .nav-link-container {
-    position: fixed; /* Fixed positioning to keep it visible */
+    position: fixed; /* Fixed positioning for mobile full-screen menu */
     top: 0;
     right: 0;
     background: rgba(255, 255, 255, 0.8);
@@ -39,23 +37,23 @@ nav {
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     height: 100vh;
     width: 100%;
-    flex-direction: column;
+    flex-direction: column; /* Vertical layout for mobile */
     justify-content: center;
     align-items: center;
     gap: 30px;
-    transform: translateX(100%);
+    transform: translateX(100%); /* Hidden off-screen initially */
     transition: transform 0.3s ease-in-out;
-    z-index: 999;
+    z-index: 999; /* Ensure menu is above other content */
     border-left: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .nav-link-container.open {
-    transform: translateX(0);
+    transform: translateX(0); /* Slide-in effect for menu */
   }
 
   /* Hamburger Menu Icon */
   .hamburger {
-    display: flex;
+    display: flex; /* Show only on mobile */
     flex-direction: column;
     cursor: pointer;
     margin-right: 10px;
@@ -70,13 +68,13 @@ nav {
     transition: all 0.3s ease;
   }
 
-  /* Transform bars into an "X" when open */
+  /* Transform bars into an "X" when menu is open */
   .hamburger.open .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
 
   .hamburger.open .bar:nth-child(2) {
-    opacity: 0;
+    opacity: 0; /* Hide middle bar */
   }
 
   .hamburger.open .bar:nth-child(3) {
@@ -85,11 +83,11 @@ nav {
 
   /* Hide the horizontal menu links on mobile */
   .nav-link-container {
-    display: none;
+    display: none; /* Default hidden state for mobile */
   }
 
   .nav-link-container.open {
-    display: flex;
+    display: flex; /* Show menu when open */
   }
 
   /* Style the mobile links */
@@ -131,4 +129,5 @@ nav {
 #logo-navbar {
   width: 130px;
 }
+
 

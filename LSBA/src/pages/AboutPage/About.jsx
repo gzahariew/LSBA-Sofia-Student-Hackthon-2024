@@ -5,10 +5,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 function About() {
+  //Animations for the header
   useGSAP(() => {
     gsap.from(["#design-about", "#and-about"], {
       x: "-50vw",
@@ -37,7 +39,6 @@ function About() {
       opacity: 0,
       duration: 1.2,
       ease: "circ.out",
-      
     });
   });
 
@@ -49,14 +50,11 @@ function About() {
       ease: "circ.out",
     });
   });
-  
-
-
-
 
   return (
     <>
       <header id="header-about">
+        {/* Greeting section */}
         <h1 id="design-about" className="headline-about">
           DESIGN
         </h1>
@@ -78,6 +76,8 @@ function About() {
           alt="sofia in smoke from above"
         />
       </header>
+
+      {/* Main section with content */}
       <main id="about-main">
         <h4 className="headline-small-about first-headline-about">
           Кои сме ние?

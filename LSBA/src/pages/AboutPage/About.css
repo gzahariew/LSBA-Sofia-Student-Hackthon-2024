@@ -1,110 +1,114 @@
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
+  margin: 0; /* Resets default margin for all elements */
+  padding: 0; /* Resets default padding for all elements */
+  border: 0; /* Resets default border for all elements */
+}
+
+html {
+  overflow-x: hidden;
 }
 
 #header-about {
-  width: 73.611vw;
-  height: 53.129vh;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 4.883vh;
+  width: 73.611vw; /* Sets width of header section */
+  height: 53.129vh; /* Sets height of header section */
+  position: relative; /* Positions header relative to its normal position */
+  margin-left: auto; /* Centers the header horizontally */
+  margin-right: auto; /* Centers the header horizontally */
+  margin-top: 4.883vh; /* Adds top margin for spacing */
 }
 
 .headline-about {
-  font-family: "Inter", serif;
-  font-size: clamp(32px, 9.028vw, 120px);
+  font-family: "Inter", serif; /* Sets font family */
+  font-size: clamp(32px, 9.028vw, 120px); /* Responsive font size */
   line-height: auto; /* Original line-height */
-  opacity: 0.2;
-  font-weight: 900;
-  z-index: 3;
+  opacity: 0.2; /* Sets transparency */
+  font-weight: 900; /* Sets boldness of the font */
+  z-index: 3; /* Ensures headline is above other elements */
 }
 
 .headline-medium-about {
-  font-family: "Unbounded", serif;
-  font-weight: 400;
-  font-size: clamp(30px, 4.167vw, 50px);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -0.6vh;
-  right: 0;
+  font-family: "Unbounded", serif; /* Sets font family */
+  font-weight: 400; /* Sets normal font weight */
+  font-size: clamp(30px, 4.167vw, 50px); /* Responsive font size */
+  position: absolute; /* Positions element absolutely */
+  top: 50%; /* Centers vertically */
+  transform: translateY(-50%); /* Adjusts for exact centering */
+  left: -0.6vh; /* Sets left position */
+  right: 0; /* Sets right position */
 }
 
 .img-about {
-  width: 59.306vw;
-  height: 52.148vh;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  object-fit: cover;
+  width: 59.306vw; /* Sets width of the image */
+  height: 52.148vh; /* Sets height of the image */
+  position: absolute; /* Positions image absolutely */
+  z-index: -1; /* Places image behind other elements */
+  top: 0; /* Aligns image to the top */
+  right: 0; /* Aligns image to the right */
+  object-fit: cover; /* Ensures the image covers its container */
 }
 
 #design-about {
-  position: absolute;
-  left: 0vw;
+  position: absolute; /* Positions element absolutely */
+  left: 0vw; /* Aligns to the left */
 }
 
 #build-about {
-  position: absolute;
-  top: 10vh;
-  right: -10vw;
+  position: absolute; /* Positions element absolutely */
+  top: 10vh; /* Sets top position */
+  right: -10vw; /* Sets right position */
 }
 
 #and-about {
-  position: absolute;
-  bottom: -3vh;
-  left: 5vh;
+  position: absolute; /* Positions element absolutely */
+  bottom: -3vh; /* Sets bottom position */
+  left: 5vh; /* Sets left position */
 }
 
 #breathe-about {
-  position: absolute;
-  right: -10vw;
-  bottom: -7vh;
+  position: absolute; /* Positions element absolutely */
+  right: -10vw; /* Sets right position */
+  bottom: -7vh; /* Sets bottom position */
 }
 
 #about-main {
-  width: 73.611vw;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  width: 73.611vw; /* Sets width of the main about section */
+  position: relative; /* Positions section relative to its normal position */
+  margin-left: auto; /* Centers the main section horizontally */
+  margin-right: auto; /* Centers the main section horizontally */
 }
 
 .headline-small-about {
-  font-family: "Unbounded", serif;
-  font-size: clamp(18px, 2.431vw, 35px);
-  font-weight: 900;
-  margin-top: 15.883vh;
+  font-family: "Unbounded", serif; /* Sets font family */
+  font-size: clamp(18px, 2.431vw, 35px); /* Responsive font size */
+  font-weight: 900; /* Sets boldness of the font */
+  margin-top: 15.883vh; /* Adds top margin for spacing */
 }
 
 .paragraph-about {
-  font-family: "Inter", serif;
-  font-size: clamp(16px, 2.083vw, 25px);
+  font-family: "Inter", serif; /* Sets font family */
+  font-size: clamp(16px, 2.083vw, 25px); /* Responsive font size */
   line-height: auto; /* Original line-height */
-  opacity: 0.9;
-  margin-top: 30px;
+  opacity: 0.9; /* Sets transparency */
+  margin-top: 30px; /* Adds top margin for spacing */
 }
 
 .img-about-main {
   width: clamp(200px, 20vw, 300px); /* Adjusted width for responsive design */
-  object-fit: cover;
-  float: right;
-  border-radius: 6px;
+  object-fit: cover; /* Ensures the image covers its container */
+  float: right; /* Floats image to the right */
+  border-radius: 6px; /* Rounds the corners of the image */
 }
 
 .float-left {
-  float: left;
-  margin-top: 15px;
+  float: left; /* Floats element to the left */
+  margin-top: 15px; /* Adds top margin for spacing */
   margin-right: 15px; /* Additional spacing for aesthetics */
   margin-bottom: 15px; /* Additional spacing to avoid crowding */
 }
 
 .float-right {
-  float: right;
-  margin-top: 15px;
+  float: right; /* Floats element to the right */
+  margin-top: 15px; /* Adds top margin for spacing */
   margin-left: 15px; /* Additional spacing for aesthetics */
   margin-bottom: 15px; /* Additional spacing to avoid crowding */
 }
@@ -112,41 +116,46 @@
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .headline-about {
-    font-size: 63px;
+    font-size: 63px; /* Adjusts font size for smaller screens */
   }
 
   .headline-medium-about {
-    font-size: clamp(27px, 2.5vw, 36px);
+    font-size: clamp(
+      27px,
+      2.5vw,
+      36px
+    ); /* Adjusts font size for smaller screens */
   }
 
   #about-main {
-    width: 90vw;
+    width: 90vw; /* Sets width for smaller screens */
   }
 
   #design-about {
-     left: -3vh;
+    left: -3vh; /* Adjusts position for smaller screens */
   }
 
   .img-about-main {
-    display: block;
-    width: 100%;
-    border-radius: 3px;
+    display: block; /* Displays image as a block */
+    width: 100%; /* Sets width for smaller screens */
+    border-radius: 3px; /* Rounds corners for smaller screens */
   }
+
   .headline-small-about {
-    margin-top: 5vh;
+    margin-top: 5vh; /* Adjusts top margin for smaller screens */
   }
 
   .paragraph-about {
-    margin-top: 10px;
+    margin-top: 10px; /* Adjusts top margin for smaller screens */
   }
-  
+
   #and-about {
-    position: absolute;
-    bottom: 5vh;
-    left: 5%;
+    position: absolute; /* Keeps absolute positioning for smaller screens */
+    bottom: 5vh; /* Sets bottom position */
+    left: 5%; /* Sets left position */
   }
-  
+
   .first-headline-about {
-    margin-top: 10vh;
+    margin-top: 10vh; /* Adjusts top margin for smaller screens */
   }
 }
