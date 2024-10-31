@@ -18,10 +18,10 @@ const Footer = () => {
   // Handle email submission
   const handleSend = () => {
     if (email.trim() && validateEmail(email)) {
-      alert("Email sent!");
+      alert("Имейлът е изпратен!");
       setEmail(""); // Clear input after sending
     } else {
-      alert("Please enter a valid email address");
+      alert("Моля, въведете валиден имейл адрес!");
     }
   };
 
@@ -78,6 +78,25 @@ const Footer = () => {
     })
   );
 
+  const handleMouseEnter = (e) => {
+    gsap.to(e.currentTarget, {
+      // Use e.currentTarget to animate the hovered element
+      scale: 1.05, // Slight scale up
+      duration: 0.3,
+      ease: "power1.out",
+    });
+  };
+
+  // Function to handle mouse leave
+  const handleMouseLeave = (e) => {
+    gsap.to(e.currentTarget, {
+      // Use e.currentTarget to reset the scale of the hovered element
+      scale: 1, // Reset scale
+      duration: 0.3,
+      ease: "power1.out",
+    });
+  };
+
   // Footer section
   return (
     <>
@@ -86,21 +105,21 @@ const Footer = () => {
           {/* Social media links */}
           <div className="social-media">
             <div className="footer-icon-container">
-              <a href="https://example.com/">
+              <a href="https://example.com/" target="_blank">
                 <img
                   className="social-icons"
                   src="/images/twitter icon.svg"
                   alt="twitter"
                 />
               </a>
-              <a href="https://example.com/">
+              <a href="https://example.com/" target="_blank">
                 <img
                   className="social-icons"
                   src="/images/instagram icon.svg"
                   alt="instagram"
                 />
               </a>
-              <a href="https://example.com/">
+              <a href="https://example.com/" target="_blank">
                 <img
                   className="social-icons"
                   src="/images/facebook logo.svg"
@@ -130,22 +149,28 @@ const Footer = () => {
           <div className="footer-links">
             <Link
               to="/"
-              className="link-style"
+              className="link-style scale-hover-footer"
               onClick={(e) => handleLinkClick(e, "/")}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
               НАЧАЛО
             </Link>
             <Link
               to="/contact"
-              className="link-style"
+              className="link-style scale-hover-footer"
               onClick={(e) => handleLinkClick(e, "/contact")}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
               КОНТАКТИ
             </Link>
             <Link
               to="/about"
-              className="link-style"
+              className="link-style scale-hover-footer"
               onClick={(e) => handleLinkClick(e, "/about")}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
               ЗА НАС
             </Link>
@@ -158,8 +183,11 @@ const Footer = () => {
           <h6 className="rights-text-home">PRIVACY POLICY</h6>
           <div
             id="back-on-top"
+            className="scale-hover-footer"
             onClick={scrollToTop}
             style={{ cursor: "pointer" }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             ОБРАТНО В НАЧАЛО
           </div>

@@ -10,7 +10,11 @@
   font-family: "Unbounded", serif; /* Set the font family */
   font-weight: 400; /* Set the font weight */
   line-height: auto; /* Set the line height to automatic */
-  font-size: clamp(14px, 1.389vw, 20px); /* Set the font size using the clamp function */
+  font-size: clamp(
+    14px,
+    1.389vw,
+    20px
+  ); /* Set the font size using the clamp function */
   display: block; /* Display the text as a block element */
   white-space: nowrap; /* Prevent the text from wrapping */
   margin-top: 1.953vh; /* Add top margin */
@@ -20,9 +24,21 @@
 /* Email input field */
 #input-footer {
   border: 2px solid rgba(0, 0, 0, 0.8); /* Add a black border with 80% opacity */
-  padding: clamp(7px, 0.794vw, 12px); /* Set the padding using the clamp function */
-  font-size: clamp(10px, 1.042vw, 15px); /* Set the font size using the clamp function */
-  width: clamp(240px, 27.153vw, 391px); /* Set the width using the clamp function */
+  padding: clamp(
+    7px,
+    0.794vw,
+    12px
+  ); /* Set the padding using the clamp function */
+  font-size: clamp(
+    10px,
+    1.042vw,
+    15px
+  ); /* Set the font size using the clamp function */
+  width: clamp(
+    240px,
+    27.153vw,
+    391px
+  ); /* Set the width using the clamp function */
   border-radius: 5px; /* Add rounded corners */
   outline: none; /* Remove the default outline */
   font-family: "Unbounded", serif; /* Set the font family */
@@ -33,12 +49,20 @@
   font-family: "Unbounded", serif; /* Set the font family */
   text-decoration: none; /* Remove the default text decoration */
   color: black; /* Set the text color to black */
-  font-size: clamp(24px, 3.333vw, 48px); /* Set the font size using the clamp function */
+  font-size: clamp(
+    24px,
+    3.333vw,
+    48px
+  ); /* Set the font size using the clamp function */
 }
 
 /* "Back to top" button */
 #back-on-top {
-  font-size: clamp(23px, 3.333vw, 40px); /* Set the font size using the clamp function */
+  font-size: clamp(
+    23px,
+    3.333vw,
+    40px
+  ); /* Set the font size using the clamp function */
   font-family: "Unbounded", serif; /* Set the font family */
   color: black; /* Set the text color to black */
   margin: 0; /* Remove the default margin */
@@ -57,6 +81,7 @@ footer {
   justify-content: space-between; /* Distribute the content horizontally */
   align-items: flex-end; /* Align the content to the bottom */
   width: 77.778vw; /* Set the width */
+  overflow-y: hidden;
 }
 
 /* Footer section container */
@@ -98,12 +123,31 @@ footer {
 #btn-send-footer-home {
   background-color: white; /* Set the background color */
   color: black; /* Set the text color */
-  opacity: 0.70; /* Set the opacity */
+  opacity: 0.7; /* Set the opacity */
   border: 2px solid black; /* Add a black border */
-  font-size: clamp(10px, 0.9vw, 13px); /* Set the font size using the clamp function */
-  width: clamp(80px, 6.944vw, 100px); /* Set the width using the clamp function */
-  height: clamp(30px, 2.778vw, 40px); /* Set the height using the clamp function */
+  font-size: clamp(
+    10px,
+    0.9vw,
+    13px
+  ); /* Set the font size using the clamp function */
+  width: clamp(
+    80px,
+    6.944vw,
+    100px
+  ); /* Set the width using the clamp function */
+  height: clamp(
+    30px,
+    2.778vw,
+    40px
+  ); /* Set the height using the clamp function */
   margin-top: 5px; /* Add top margin */
+  transition: 400ms;
+}
+
+/* Hover effect for the button with ID btn-send-footer-home */
+#btn-send-footer-home:hover {
+  opacity: 0.9; /* Reduce opacity to 0.9 on hover */
+  transition: opacity 300ms; /* Smooth transition over 300 milliseconds */
 }
 
 /* Biggest logo in the footer */
@@ -115,7 +159,11 @@ footer {
 
 /* Copyright and privacy policy text */
 .rights-text-home {
-  font-size: clamp(0px, 1.667vw, 16px); /* Set the font size using the clamp function */
+  font-size: clamp(
+    0px,
+    1.667vw,
+    16px
+  ); /* Set the font size using the clamp function */
   font-family: "Roboto", serif; /* Set the font family */
   margin: 0; /* Remove the default margin */
   padding: 0; /* Remove the default padding */
@@ -147,6 +195,11 @@ footer {
   }
 
   .ending-text {
-    justify-content: center !important; /* Center the content horizontally */
+    justify-content: center !important; /* Center content */
+    overflow-y: visible; /* Allow vertical overflow */
+  }
+
+  .footer-icon-container {
+    gap: 5.25vw; /* Space between icons */
   }
 }

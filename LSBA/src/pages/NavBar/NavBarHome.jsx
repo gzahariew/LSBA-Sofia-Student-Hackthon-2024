@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./navBar.css";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const NavbarHome = () => {
   const [isOpen, setIsOpen] = useState(false); // Track menu open/close state
@@ -30,6 +32,7 @@ const NavbarHome = () => {
     };
   }, [isOpen]);
 
+
   return (
     <nav className="navbar">
       {/* Logo linking to home */}
@@ -41,12 +44,16 @@ const NavbarHome = () => {
 
       {/* Navigation links displayed based on `isOpen` state */}
       <div className={`nav-link-container ${isOpen ? "open" : ""}`}>
-        <Link to="/about" className="no-link-style" onClick={toggleMenu}>
-          ЗА НАС
-        </Link>
-        <Link to="/contact" className="no-link-style" onClick={toggleMenu}>
-          СВЪРЖИ СЕ
-        </Link>
+        <div className="hover-div-nav">
+          <Link to="/about" className="no-link-style" onClick={toggleMenu}>
+            ЗА НАС
+          </Link>
+        </div>
+        <div className="hover-div-nav">
+          <Link to="/contact" className="no-link-style" onClick={toggleMenu}>
+            КОНТАКТИ
+          </Link>
+        </div>
       </div>
 
       {/* Hamburger menu icon to toggle navigation menu */}

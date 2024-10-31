@@ -102,18 +102,21 @@ function Home() {
     scrollAnimateElements(targets, options);
   });
 
-  const handleMouseEnterFirst = () => {
-    gsap.to(".button-main", {
-      opacity: 0.8,
+  const handleMouseEnterFirst = (e) => {
+    gsap.to(e.currentTarget, {
+      // Use e.currentTarget to animate the hovered button
+      opacity: 0.8, // Slightly decrease opacity
       scale: 1.05, // Slight scale up
       duration: 0.3,
       ease: "power1.out",
     });
   };
 
-  const handleMouseLeaveFirst = () => {
-    gsap.to(".button-main", {
-      opacity: 1,
+  // Function to handle mouse leave
+  const handleMouseLeaveFirst = (e) => {
+    gsap.to(e.currentTarget, {
+      // Use e.currentTarget to reset the scale and opacity
+      opacity: 1, // Reset opacity
       scale: 1, // Reset scale
       duration: 0.3,
       ease: "power1.out",

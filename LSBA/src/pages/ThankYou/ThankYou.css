@@ -9,13 +9,14 @@
 
 #thank-you {
     font-family: "Work Sans", serif; /* Sets font family */
-    font-size: 160px; /* Sets font size */
+    font-size: clamp(53px, 11.111vw, 160px); /* Sets font size */
     font-weight: 900; /* Sets boldness of the font */
     opacity: 0.2; /* Sets transparency */
     line-height: auto; /* Original line-height */
     margin: 0; /* Resets margin */
     z-index: -1; /* Places the element behind other elements */
-    letter-spacing: -6.25px; /* Adjusts spacing between letters */
+    letter-spacing: -6.25px;
+    white-space: nowrap; /* Adjusts spacing between letters */
 }
 
 .paragraph-data {
@@ -23,10 +24,11 @@
     font-weight: 500; /* Sets normal font weight */
     color: black; /* Sets text color to black */
     opacity: 80%; /* Sets transparency (should use a value between 0 and 1) */
-    font-size: 28px; /* Sets font size */
+    font-size: clamp(16px, 1.944vw, 28px); /* Sets font size */
     letter-spacing: -5%; /* Adjusts spacing between letters */
     margin: 0; /* Resets margin */
     margin-top: 30px; /* Adds top margin for spacing */
+    text-align: center; /* Centers the text within the element */
 }
 
 .paragraph-redirect {
@@ -34,7 +36,14 @@
     font-weight: 500; /* Sets normal font weight */
     color: black; /* Sets text color to black */
     opacity: 80%; /* Sets transparency (should use a value between 0 and 1) */
-    font-size: 18px; /* Sets font size */
+    font-size: clamp(12px, 1.25vw, 18px); /* Sets font size */
     letter-spacing: -5%; /* Adjusts spacing between letters */
     margin-top: 10px; /* Adds top margin for spacing */
+    text-align: center; /* Centers the text within the element */
 }
+
+@media (max-width: 768px) {
+    #thank-you {
+       letter-spacing: normal; /* Adjust letter spacing for mobile */
+    }
+ }

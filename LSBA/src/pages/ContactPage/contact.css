@@ -188,7 +188,7 @@
 
   #big-btn {
     height: auto; /* Allows for better adaptability on small screens */
-    padding: 1vh 4vh; /* Reduces padding for smaller screens */
+    padding: 1vh 2.5vh; /* Reduces padding for smaller screens */
     font-size: clamp(16px, 5vw, 25px); /* Smaller, responsive font size */
   }
 

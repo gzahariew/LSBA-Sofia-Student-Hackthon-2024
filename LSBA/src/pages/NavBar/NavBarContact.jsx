@@ -41,12 +41,16 @@ const NavbarContact = () => {
 
       {/* Navigation links, appear conditionally based on `isOpen` state */}
       <div className={`nav-link-container ${isOpen ? "open" : ""}`}>
-        <Link to="/" className="no-link-style" onClick={toggleMenu}>
-          НАЧАЛО
-        </Link>
-        <Link to="/about" className="no-link-style" onClick={toggleMenu}>
-          ЗА НАС
-        </Link>
+        <div className="hover-div-nav">
+          <Link to="/" className="no-link-style" onClick={toggleMenu}>
+            НАЧАЛО
+          </Link>
+        </div>
+        <div className="hover-div-nav">
+          <Link to="/about" className="no-link-style" onClick={toggleMenu}>
+            ЗА НАС
+          </Link>
+        </div>
       </div>
 
       {/* Hamburger menu icon with toggle on click */}

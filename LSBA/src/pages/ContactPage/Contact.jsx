@@ -87,7 +87,7 @@ const Contact = () => {
         email: validateField("email", formData.email),
         message: validateField("message", formData.message),
       });
-      alert("Please ensure all fields are filled out correctly."); // Alert for user feedback
+      alert("Моля, уверете се, че всички полета са попълнени коректно."); // Alert for user feedback
     } else {
       navigate("/thank-you");
       clearInputs();

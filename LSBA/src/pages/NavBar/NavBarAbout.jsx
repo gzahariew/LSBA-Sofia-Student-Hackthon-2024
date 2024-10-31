@@ -28,12 +28,16 @@ const NavbarAbout = () => {
         </Link>
       </div>
       <div className={`nav-link-container ${isOpen ? "open" : ""}`}>
-        <Link to="/" className="no-link-style" onClick={toggleMenu}>
-          НАЧАЛО
-        </Link>
-        <Link to="/contact" className="no-link-style" onClick={toggleMenu}>
-          СВЪРЖИ СЕ
-        </Link>
+        <div className="hover-div-nav">
+          <Link to="/" className="no-link-style" onClick={toggleMenu}>
+            НАЧАЛО
+          </Link>
+        </div>
+        <div className="hover-div-nav">
+          <Link to="/contact" className="no-link-style" onClick={toggleMenu}>
+            КОНТАКТИ
+          </Link>
+        </div>
       </div>
 
       {/* Hamburger Menu */}
